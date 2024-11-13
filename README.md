@@ -1,4 +1,4 @@
-# LangChain RAG Workflow
+# LangGraph RAG Workflow
 
 ## Overview
 This project demonstrates a Retrieval-Augmented Generation (RAG) workflow for matching researcher profiles with user queries using the LangChain framework. It integrates document retrieval, a Long Language Model (LLM), and a state machine workflow to handle the entire process, from retrieving relevant researcher profiles to generating user responses.
