@@ -1,4 +1,5 @@
 import os
+import json
 from typing_extensions import TypedDict
 from typing import List
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -12,28 +13,28 @@ from langchain.schema import Document
 
 # Constants
 LOCAL_LLM = 'llama3'
-FOLDER_PATH = "/home/svend/projects/LAMARAG/split_files/"
+JSON_FILE_PATH = "/home/svend/projects/langgraph_advanced_RAG/researchers.json"
 CHUNK_SIZE = 250
 CHUNK_OVERLAP = 0
 
-# Load documents from the folder. Each text file is read and converted into a LangChain Document object.
-def load_documents(folder_path):
+# Load documents from the JSON file.
+def load_documents_from_json(json_file_path):
     """
-    Load documents from a specified folder path.
-    Reads all text files in the folder, converts them into LangChain Document objects, and returns a list of these documents.
+    Load documents from a specified JSON file path.
+    Reads the JSON file, extracts each researcher's profile, and converts them into LangChain Document objects.
 
     Args:
-        folder_path (str): The path to the folder containing the text files.
+        json_file_path (str): The path to the JSON file containing researcher profiles.
 
     Returns:
-        list: A list of Document objects containing the content of each text file.
+        list: A list of Document objects containing the content of each researcher's profile.
     """
     docs_list = []
-    for filename in os.listdir(folder_path):
-        if filename.endswith(".txt"):
-            with open(os.path.join(folder_path, filename), "r", encoding="utf-8") as file:
-                content = file.read()
-                docs_list.append(Document(page_content=content))
+    with open(json_file_path, "r", encoding="utf-8") as file:
+        data = json.load(file)
+        for profile in data:
+            content = f"Name: {profile['name']}\nBio: {profile['bio']}\nKeywords: {profile['keywords']}\nResearch Unit: {profile['research_unit']}\nEmail: {profile['email']}\nPhone: {profile['phone']}"
+            docs_list.append(Document(page_content=content))
     return docs_list
 
 # Split the loaded documents into smaller chunks for better retrieval and indexing.
@@ -106,7 +107,7 @@ def create_prompt_template(template_str, input_variables):
     )
 
 # Load documents and create a vector store.
-docs_list = load_documents(FOLDER_PATH)
+docs_list = load_documents_from_json(JSON_FILE_PATH)
 doc_splits = split_documents(docs_list, CHUNK_SIZE, CHUNK_OVERLAP)
 vectorstore = create_vector_store(doc_splits)
 retriever = vectorstore.as_retriever()
@@ -126,11 +127,11 @@ retrieval_grader_prompt = create_prompt_template(
 )
 
 rag_generation_prompt = create_prompt_template(
-    template_str="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are an assistant for 
+    template_str="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are an AI robot assistant for 
     question-answering tasks. Use the provided retrieved context to answer the question. 
     If the answer is not clear, simply state that you don't know. Point out why the profiles match the query. 
     End with a list of the relevant researchers with their contact information.
-    Keep your response concise but complete.
+    Act as personal robot with a funny but intellectual personality.
     . <|eot_id|><|start_header_id|>user<|end_header_id|>
     Question: {question} 
     Context: {context} 
@@ -247,7 +248,9 @@ app = workflow.compile()
 # Run the compiled application by providing a question.
 # The app will stream the outputs from each function that is executed.
 from pprint import pprint
-inputs = {"question": "I'm looking for a computer vision engineer in the field of medical image analysis?"}
+# Prompt the user for a question from the command line.
+user_question = input("You: ")
+inputs = {"question": user_question}
 for output in app.stream(inputs):
     for key, value in output.items():
         pprint(f"Finished running: {key}:")
