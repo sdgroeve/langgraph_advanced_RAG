@@ -48,7 +48,7 @@ To run this project, you need to install the required dependencies, which are li
     ollama pull llama3
     ```
 
-5. Ensure you have a JSON file containing researcher profiles at the specified path (`/home/svend/projects/langgraph_advanced_RAG/researchers.json`). You can customize the JSON file location in the script.
+5. Ensure you have a JSON file containing researcher profiles at the specified path. You can customize the JSON file location in the script.
 
 ## Usage
 The application starts by prompting the user to enter a question. It then retrieves relevant researcher profiles based on the user's question, grades their relevance, and uses Retrieval-Augmented Generation (RAG) to generate an answer. Follow these steps to run the application:
