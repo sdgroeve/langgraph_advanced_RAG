@@ -92,13 +92,3 @@ The workflow includes:
 
 ## License
 Feel free to use and modify this project as per your requirements. Licensed under MIT.
-
-## Contact
-For any issues or questions, please reach out to me.
-
-## Contributions
-Contributions are welcome! Please open a pull request or issue for any suggestions or bug reports.
-
-## To Do
-- Add support for different types of embeddings and vector stores.
-- Include a more interactive frontend interface to enhance usability.
