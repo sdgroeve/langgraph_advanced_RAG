@@ -39,7 +39,16 @@ To run this project, you need to install the required dependencies, which are li
     pip install -r requirements.txt
     ```
 
-4. Ensure you have a JSON file containing researcher profiles at the specified path (`/home/svend/projects/langgraph_advanced_RAG/researchers.json`). You can customize the JSON file location in the script.
+4. Install and download the llama3 model using ollama:
+    ```bash
+    # Install ollama (if not already installed)
+    curl -fsSL https://ollama.com/install.sh | sh
+    
+    # Download the llama3 model
+    ollama pull llama2
+    ```
+
+5. Ensure you have a JSON file containing researcher profiles at the specified path (`/home/svend/projects/langgraph_advanced_RAG/researchers.json`). You can customize the JSON file location in the script.
 
 ## Usage
 The application starts by prompting the user to enter a question. It then retrieves relevant researcher profiles based on the user's question, grades their relevance, and uses Retrieval-Augmented Generation (RAG) to generate an answer. Follow these steps to run the application:
@@ -93,5 +102,3 @@ Contributions are welcome! Please open a pull request or issue for any suggestio
 ## To Do
 - Add support for different types of embeddings and vector stores.
 - Include a more interactive frontend interface to enhance usability.
-
-
