@@ -33,7 +33,15 @@ def load_documents_from_json(json_file_path):
     with open(json_file_path, "r", encoding="utf-8") as file:
         data = json.load(file)
         for profile in data:
-            content = f"Name: {profile['name']}\nBio: {profile['bio']}\nKeywords: {profile['keywords']}\nResearch Unit: {profile['research_unit']}\nEmail: {profile['email']}\nPhone: {profile['phone']}"
+            content = (
+                f"Name: {profile.get('name', 'N/A')}\n"
+                f"Profile URL: {profile.get('profile_url', 'N/A')}\n"
+                f"Description: {profile.get('description', 'N/A')}\n"
+                f"Keywords: {', '.join(profile.get('keywords', []))}\n"
+                f"Research Focus: {profile.get('research_focus', 'N/A')}\n"
+                f"Contact Info: {profile.get('contact_info', 'N/A')}\n"
+                f"Links: {', '.join([link['text'] + ' (' + link['url'] + ')' for link in profile.get('links', [])])}"
+            )
             docs_list.append(Document(page_content=content))
     return docs_list
 
@@ -114,28 +122,20 @@ retriever = vectorstore.as_retriever()
 
 # Create prompt templates.
 retrieval_grader_prompt = create_prompt_template(
-    template_str="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are provided with a 
-    researcher profile that is matched with a user query. If the profiles includes keywords associated with the query, 
-    mark it as relevant. The assessment should not be overly strict; the objective is to eliminate incorrect retrievals. 
-    Assign a binary score of 'yes' or 'no' to indicate the profile's relevance. 
-    Return the binary score as a JSON with a single key 'score', without any preamble or further explanation.
-    <|eot_id|><|start_header_id|>user<|end_header_id|>
-    This is the retrieved researcher profile: \n\n {document} \n\n
-    This is the user question: {question} \n <|eot_id|><|start_header_id|>assistant<|end_header_id|>
+    template_str="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are provided with a \
+    researcher profile that is matched with a user query. If the profiles include keywords associated with the query, \
+    mark it as relevant. The assessment should not be overly strict; the objective is to eliminate incorrect retrievals. \
+    Assign a binary score of 'yes' or 'no' to indicate the profile's relevance. \
+    Return the binary score as a JSON with a single key 'score', without any preamble or further explanation.\n<|eot_id|><|start_header_id|>user<|end_header_id|>\nThis is the retrieved researcher profile: \n\n {document} \n\n\nThis is the user question: {question} \n<|eot_id|><|start_header_id|>assistant<|end_header_id|>
     """,
     input_variables=["question", "document"]
 )
 
 rag_generation_prompt = create_prompt_template(
-    template_str="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are an AI robot assistant for 
-    question-answering tasks. Use the provided retrieved context to answer the question. 
-    If the answer is not clear, simply state that you don't know. Point out why the profiles match the query. 
-    End with a list of the relevant researchers with their contact information.
-    Act as personal robot with a funny but intellectual personality.
-    . <|eot_id|><|start_header_id|>user<|end_header_id|>
-    Question: {question} 
-    Context: {context} 
-    Answer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>""",
+    template_str="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are an AI robot assistant for \
+    question-answering tasks. Use the provided retrieved context to answer the question. \
+    If the answer is not clear, simply state that you don't know. Point out why the profiles match the query. \
+    End with a list of the relevant researchers with their contact information.\n    Act as a personal robot with a funny but intellectual personality.\n<|eot_id|><|start_header_id|>user<|end_header_id|>\nQuestion: {question} \nContext: {context} \nAnswer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>""",
     input_variables=["question", "context"]
 )
 
@@ -156,9 +156,9 @@ class GraphState(TypedDict):
         generation (str): The generated response from the LLM.
         documents (List[str]): A list of retrieved documents.
     """
-    question : str
-    generation : str
-    documents : List[str]
+    question: str
+    generation: str
+    documents: List[str]
 
 # Define functions for different nodes in the workflow.
 
