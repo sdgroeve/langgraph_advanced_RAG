@@ -45,7 +45,7 @@ To run this project, you need to install the required dependencies, which are li
     curl -fsSL https://ollama.com/install.sh | sh
     
     # Download the llama3 model
-    ollama pull llama2
+    ollama pull llama3
     ```
 
 5. Ensure you have a JSON file containing researcher profiles at the specified path (`/home/svend/projects/langgraph_advanced_RAG/researchers.json`). You can customize the JSON file location in the script.
