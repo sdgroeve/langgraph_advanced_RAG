@@ -15,6 +15,7 @@ The main components of the workflow include:
 - **ChatOllama** for a conversational LLM interface.
 - **LangChain** for text splitting, prompt creation, and chaining LLMs.
 - A **StateGraph** for defining workflow nodes and transitions for document retrieval, grading, and answer generation.
+- **Flask** web interface for interactive querying
 
 ## Installation
 To run this project, you need to install the required dependencies, which are listed in `requirements.txt`. Please follow these steps:
@@ -51,7 +52,22 @@ To run this project, you need to install the required dependencies, which are li
 5. Ensure you have a JSON file containing researcher profiles at the specified path. You can customize the JSON file location in the script.
 
 ## Usage
-The application starts by prompting the user to enter a question. It then retrieves relevant researcher profiles based on the user's question, grades their relevance, and uses Retrieval-Augmented Generation (RAG) to generate an answer. Follow these steps to run the application:
+
+### Web Interface
+To use the web interface, follow these steps:
+
+1. Start the Flask application:
+    ```bash
+    python app.py
+    ```
+    This will launch the web server at http://127.0.0.1:5000
+
+2. Open your web browser and navigate to http://127.0.0.1:5000
+
+3. Use the web interface to input your questions and receive responses about researcher profiles
+
+### Command Line Interface
+The application can also be run from the command line. Follow these steps:
 
 1. Run the script:
     ```
@@ -66,9 +82,12 @@ The application starts by prompting the user to enter a question. It then retrie
 3. The workflow will handle document retrieval, grading, and generate a relevant response with the matched researcher profiles.
 
 ## Project Structure
+- **app.py**: Flask application for the web interface
 - **langchain_rag_workflow.py**: The main script to run the RAG workflow.
 - **researchers.json**: A JSON file that contains profiles of researchers (name, bio, keywords, research unit, etc.). You can modify this file to match your data.
 - **requirements.txt**: Contains all the dependencies required to run the project.
+- **templates/**: Contains HTML templates for the web interface
+- **static/**: Contains CSS and JavaScript files for the web interface
 
 ## Requirements
 - Python 3.8+
@@ -78,6 +97,7 @@ The application starts by prompting the user to enter a question. It then retrie
 - `langchain_core`
 - `Chroma`
 - `GPT4AllEmbeddings`
+- `Flask`
 
 Install all required packages by running:
 ```bash
