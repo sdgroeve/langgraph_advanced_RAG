@@ -16,6 +16,7 @@ LOCAL_LLM = 'llama3'
 JSON_FILE_PATH = "/home/svend/projects/langgraph_advanced_RAG/scraping/researchers_crig.json"
 CHUNK_SIZE = 250
 CHUNK_OVERLAP = 0
+EMBEDDINGS_DIR = "/home/svend/projects/langgraph_advanced_RAG/embeddings_db"
 
 # Define the state class
 class GraphState(TypedDict):
@@ -56,13 +57,33 @@ def split_documents(docs_list, chunk_size, chunk_overlap):
     )
     return text_splitter.split_documents(docs_list)
 
-# Create a vector store using the Chroma library.
+# Create or load a vector store using the Chroma library.
 def create_vector_store(doc_splits):
-    return Chroma.from_documents(
+    embedding_function = GPT4AllEmbeddings()
+    
+    # Try to load existing embeddings
+    if os.path.exists(EMBEDDINGS_DIR):
+        try:
+            vectorstore = Chroma(
+                persist_directory=EMBEDDINGS_DIR,
+                embedding_function=embedding_function,
+                collection_name="rag-chroma"
+            )
+            # If collection exists and has documents, return it
+            if vectorstore._collection.count() > 0:
+                return vectorstore
+        except Exception as e:
+            print(f"Error loading existing embeddings: {e}")
+    
+    # Create new embeddings if none exist or loading failed
+    vectorstore = Chroma.from_documents(
         documents=doc_splits,
-        collection_name="rag-chroma",
-        embedding=GPT4AllEmbeddings(),
+        embedding=embedding_function,
+        persist_directory=EMBEDDINGS_DIR,
+        collection_name="rag-chroma"
     )
+    vectorstore.persist()
+    return vectorstore
 
 # Format documents for use as context
 def format_docs(docs):
