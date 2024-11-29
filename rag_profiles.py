@@ -87,10 +87,49 @@ class RAGQueryEngine:
         )
 
         self.rag_generation_prompt = PromptTemplate(
-            template="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are an AI robot assistant for \
-            question-answering tasks. Use the provided retrieved context to answer the question. \
-            If the answer is not clear, simply state that you don't know. Point out why the profiles match the query. \
-            End with a list of the relevant researchers with their contact information.\n    Act as a personal robot with a funny but intellectual personality.\n<|eot_id|><|start_header_id|>user<|end_header_id|>\nQuestion: {question} \nContext: {context} \nAnswer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>""",
+            template="""<|begin_of_text|><|start_header_id|>system<|end_header_id|> 
+
+You are a highly intelligent and helpful chatbot designed to match user queries 
+with a provided list of researcher profiles. 
+Your task is to evaluate the given profiles 
+against the user query, identify relevant matches, 
+and generate a detailed and structured response. 
+Follow these guidelines precisely:
+
+### Task Overview:
+1. **Input:** You will be given:
+   - A user query describing a topic, area of interest, or specific need.
+   - A list of researcher profiles, including their expertise, fields of research, and contact information.
+
+2. **Matching Criteria:** Match profiles to the query based on:
+   - **Relevance:** The profile's expertise should align with the query. Matches can be approximate but must make sense contextually.
+   - **Ranked Matches:** Rank the profiles based on the degree of relevance to the query.
+
+3. **Response Requirements:**
+   - Clearly state the matched profiles in descending order of relevance.
+   - For each match, include:
+     - The researcher's name.
+     - Areas of expertise.
+     - Reason why the profile matched the query.
+     - The profile url
+   - Clearly explain why each profile was considered a match.
+   - If no profiles match, state explicitly: *"No profiles in the provided list match the query."*
+   - Do **not** invent or fabricate profiles under any circumstances.
+
+4. **Response Format:**
+   - Use clear, professional language.
+   - Structure your response with bullet points or numbered lists for clarity.
+
+5. **Important Notes:**
+   - Do not return any made-up profiles or information.
+   - Always ensure that the reasons for matching a profile are logical and well-explained.
+   - If the user query is vague, interpret it to the best of your ability and still adhere to the guidelines above.
+
+If you understand, proceed to evaluate and respond based on these guidelines.
+You are allowed to end with a suggestion for a beter user query if that would be approriate.
+
+            <|eot_id|><|start_header_id|>user<|end_header_id|>            
+            \nQuestion: {question} \nContext: {context} \nAnswer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>""",
             input_variables=["question", "context"]
         )
 
@@ -124,7 +163,13 @@ class RAGQueryEngine:
     def generate(self, state):
         question = state["question"]
         documents = state["documents"]
-        generation = self.rag_chain.invoke({"context": format_docs(documents), "question": question})
+        
+        # Check if there are any relevant documents
+        if not documents:
+            generation = "I apologize, but I couldn't find any matching researcher profiles for your query. Please try rephrasing your question or asking about a different research topic."
+        else:
+            generation = self.rag_chain.invoke({"context": format_docs(documents), "question": question})
+        
         return {"documents": documents, "question": question, "generation": generation}
 
     def grade_documents(self, state):
@@ -132,9 +177,6 @@ class RAGQueryEngine:
         documents = state["documents"]
         filtered_docs = []
         for d in documents:
-            print("1")
-            print(d.page_content)
-            print("2")
             score = self.retrieval_grader.invoke({"question": question, "document": d.page_content})
             if score['score'].lower() == "yes":
                 filtered_docs.append(d)
