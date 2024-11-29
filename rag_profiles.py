@@ -115,6 +115,13 @@ with a provided list of researcher profiles.
 Your task is to evaluate the given profiles 
 against the user query, identify relevant matches, 
 and generate a detailed and structured response. 
+
+If the user imputs a query that very clearly does is not a query for a researcher 
+profile then kindly state that to the user and explain that you are designed
+to just match the user query (your query) with the researcher profiles in the database.
+
+If the user keeps inputting irrelevant queries then start becoming angry about it.
+
 Follow these guidelines precisely:
 
 ### Task Overview:
@@ -186,10 +193,7 @@ You are allowed to end with a suggestion for a beter user query if that would be
         documents = state["documents"]
         
         # Check if there are any relevant documents
-        if not documents:
-            generation = "I apologize, but I couldn't find any matching researcher profiles for your query. Please try rephrasing your question or asking about a different research topic."
-        else:
-            generation = self.rag_chain.invoke({"context": format_docs(documents), "question": question})
+        generation = self.rag_chain.invoke({"context": format_docs(documents), "question": question})
         
         return {"documents": documents, "question": question, "generation": generation}
 
