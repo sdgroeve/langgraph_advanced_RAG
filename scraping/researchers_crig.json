@@ -87,291 +87,234 @@
       "promotor": [
         {
           "title": "β-actin in neutral crest cell migration and brain development",
-          "url": "../../../result/project/bde0b762-ef78-4ee4-abc3-d06f563d361a/details/365n9110--actin-in-neutral-crest-cell-migration-and-brain-development/en",
           "description": "The mouse genome consists of six functional actin genes of which the expression patterns are temporally and spatially regulated during development and in the adult organism. Deletion of beta-actin in mouse is lethal during embryonic development, although there is compensatory expression of other actin isoforms. This suggests different isoform specific functions and, more in particular, an important function for beta-actin during early mammalian development. We here report a role for beta-actin during neural crest ontogeny. Although beta-actin null neural crest cells show expression of neural crest markers, less cells delaminate and their migration arrests shortly after. These phenotypes were associated with elevated apoptosis levels in neural crest cells, whereas proliferation levels were unchanged. Specifically the pre-migratory neural crest cells displayed higher levels of apoptosis, suggesting increased apoptosis in the neural tube accounts for the decreased amount of migrating neural crest cells seen in the beta-actin null embryos. These cells additionally displayed a lack of membrane bound N-cadherin and dramatic decrease in cadherin-11 expression which was more pronounced in the pre-migratory neural crest population, potentially indicating linkage between the cadherin-11 expression and apoptosis. By inhibiting ROCK ex vivo, the knockout neural crest cells regained migratory capacity and cadherin-11 expression was upregulated. We conclude that the presence of beta-actin is vital for survival, specifically of pre-migratory neural crest cells, their proper emigration from the neural tube and their subsequent migration. Furthermore, the absence of beta-actin affects cadherin-11 and N-cadherin function, which could partly be alleviated by ROCK inhibition, situating the Rho-ROCK signaling in a feedback loop with cadherin-11."
         },
         {
           "title": "Beta-actin mediated regulation of cell migration in embryonic development.",
-          "url": "../../../result/project/580d4ba3-5ff6-4a7e-a438-0e7a11361326/details/3g044110-beta-actin-mediated-regulation-of-cell-migration-in-embryonic-development/en",
           "description": "Cell migration is an evolutionary conserved mechanism that underlies the development and functioning of organisms (Tondeleir et al., 2009). Despite the differences in cell types involved, their migratory events occur by similar molecular mechanisms that rely on a functional actin cytoskeleton. The actin system is complex and there is reciprocal communication with the extracellular matrix and with other cells via various signaling pathways. Due to this complexity, our research group initiated studying the actin cytoskeleton via systems biology approaches. The model system we employ is the unique β-actin knock out (KO) mouse. One of the surprising results is that deleting β-actin not only impairs cell migration but also causes reprogramming of the expression profile of cells. Based on these recent data we formulate various hypotheses that will be addressed in this project. Genetic ablation of β-actin results in embryonic lethality at midgestation: day E10,5 (Schmerling et al., 2005). Our primary observation is the actin isoform switch or compensatory expression of other actin isoforms (mainly α-smooth muscle actin, αSMA) in the β-actin KO mouse embryonic fibroblasts (MEFs) and embryo’s. In addition, β-actin KO MEFs display a severe migration defect and pronounced stress fiber and focal adhesion formation, caused by a feedback mechanism induced by overproduction of αSMA and involving Rho-ROCK activity. Disrupting the stress fibers with ROCK inhibitor or blebbistatin restores cell migration, indicating that cell migration can occur without β-actin and challenging the dogma in the field that β-actin is the driving force for cell migration (Lambrechts et al., in preparation). It also shows that the cell migration defect is a secondary effect of β-actin ablation, due to altered regulation of the actin cytoskeleton. Consistent with this, quantitative proteomics and micro-array experiments indicate dramatic changes in gene expressions (1580 affected genes) between WT MEFs and β-actin KO MEFs. These observations strengthen our hypothesis that knock-out of β- actin triggers αSMA expression, leading to altered cytoskeletal organization and/or subsequent differential expression regulation."
         },
         {
           "title": "BOF-ZAP professorship in medical biochemistry",
-          "url": "../../../result/project/edebae54-b45e-4b93-a3f7-c71ac58f1e03/details/01z37315-bof-zap-professorship-in-medical-biochemistry/en",
           "description": "A BOF-ZAP professorship granted by the Special Research Fund is a primarily research-oriented position and is made available for excellent researchers with a high-quality research programme."
         },
         {
           "title": "Capture, dissemination and analysis of multiscale cell migration data for biological and clinical applications (MULTIMOT)",
-          "url": "../../../result/project/aa7737c8-202c-40eb-ba12-708a515de4dc/details/multimot-41g05615-capture-dissemination-and-analysis-of-multiscale-cell-migration-data-for-biological-and-clinical-applications-multimot/en",
           "description": "Cell migration is the fundamental process in medically highly relevant topics, including morphogenesis, immune function, wound healing,and cancer metastasis, and the study of cell migration thus has a direct impact on major clinical applications, especially regarding personalized treatment and diagnosis. Over the last few years, cell migration research has benefited enormously from advances in methodology and instrumentation, allowing multiplexing and multi-parameter post-processing of cell migration analyses to become widely used. As cell migration studies have thus de facto become both a high-content as well as a high-throughput science, an urgent yet largely unmet bioinformatics need has emerged in the form of intra- and inter-lab data management solutions, standardization and dissemination infrastructure, and novel approaches and algorithms for meta-analysis."
         },
         {
           "title": "Causative role of actin binding proteins in tumor progression: focus on thymosin beta isoforms",
-          "url": "../../../result/project/0ab5eed0-2bf2-44b5-a7bf-97868b63f5c4/details/3f001604-causative-role-of-actin-binding-proteins-in-tumor-progression--focus-on-thymosin-beta-isoforms/en",
           "description": null
         },
         {
           "title": "Differential regulation of beta- and gamma-actin in cell migration and neuronal differentiation",
-          "url": "../../../result/project/c1888fb4-da1c-417b-aa7c-b7962bf179f2/details/3e001401-differential-regulation-of-beta--and-gamma-actin-in-cell-migration-and-neuronal-differentiation/en",
           "description": null
         },
         {
           "title": "Exploring the potential of cytotoxic biologicals or synthetic drugs in cancer cell models",
-          "url": "../../../result/project/2401aa4b-5a35-11ef-b6a0-49d99dda6551/details/bof-baf-3y-2024-01-022-exploring-the-potential-of-cytotoxic-biologicals-or-synthetic-drugs-in-cancer-cell-models/en",
           "description": "Cancer affects millions of people a year worldwide. To combat cancer the cytotoxic potential of novel drugs of natural origin or the application of specific combinations of existing drugs with increased efficacy are an active area of research. The main topic in the research group is exploring structure-activity relations of cytotoxic cyclic lipopeptides produced by Pseudomonas bacteria or chemically synthesized derivatives of these biologicals using in vitro analysis on cancer cell lines of diverse origin. The unique cell death inducing mechanism of these lipopeptides in which the cancer cell membrane is targeted is also investigated. As general approach to address cytotoxicity in this research line and in ongoing parallel collaborative research, we address the urgent need for standardization of specific cell-based assays and combine reductionist approaches (biochemical, molecular cell biology, microscopy, …) with systems biology approaches (proteomics, imaging analysis, bioinformatics, …)."
         },
         {
           "title": "MEMCLIP: A comprehensive chemical-biology approach to understand the bioactivity of Pseudomonas cyclic lipopeptides on eukaryotic membranes",
-          "url": "../../../result/project/01f723e7-5acd-11e9-8a8a-cbee2414e8b5/details/memclip-01g02819-memclip--a-comprehensive-chemical-biology-approach-to-understand-the-bioactivity-of-pseudomonas-cyclic-lipopeptides-on-eukaryotic-membranes/en",
           "description": "The activity of cyclic lipopeptides, produced by Pseudomonas bacteria and chemically synthesized analogues will be tested in a standardized way on human (healthy and cancer) cells, plant cell suspensions and fungal cells. Using a combination of biological and (physico-)chemical methods we will test the hypothesis that in all these eukaryotic cells, these lipopeptides act on lipids in the cell membranes."
         },
         {
           "title": "Molecular mechanisms in tumor cell invasion and diabetes: bridging novel proteomics with cell biology",
-          "url": "../../../result/project/0f76f010-8504-4b5b-916c-874728792945/details/01g012a7-molecular-mechanisms-in-tumor-cell-invasion-and-diabetes--bridging-novel-proteomics-with-cell-biology/en",
           "description": "Using recently developed gel-free proteome technologies (COFRADIC), we aim at gaining new insights and identifying novel molecules involved in signaling mechnisms leading to tumor invasion and B-cell destruction in diabetes."
         },
         {
           "title": "Regulatorische functie van beta-actine op eiwitexpressie, celmorfologie en focale adhesievorming",
-          "url": "../../../result/project/c8c1a84b-eec8-4e92-94fb-e13d4b2a64cd/details/31508308-regulatorische-functie-van-beta-actine-op-eiwitexpressie-celmorfologie-en-focale-adhesievorming/en",
           "description": "Regulatorische functie van beta-actine op eiwitexpressie, celmorfologie en focale adhesievorming"
         },
         {
           "title": "Study of the essential function of beta-actin in embryonic development and the necessity for correct localisation of beta-actin MRNA during neuronal development",
-          "url": "../../../result/project/84c91168-8794-440b-b577-f19b9cc0a2db/details/01d22407-study-of-the-essential-function-of-beta-actin-in-embryonic-development-and-the-necessity-for-correct-localisation-of-beta-actin-mrna-during-neuronal-development/en",
           "description": "Through analysis of the B-actin knock-out en knock-in mice, and derived cell lines thereof, we will study the essential functions of B-actin in development (more specific in vascularisation and neuronal differentiation) and the role of the 3'UTR in correct localization and function of B-actin. Several methods will be used, including in situ immunostaining, primary cell cultures, RNAi and differential proteome analysis."
         },
         {
           "title": "Study of the essential function of beta-actin in embryonic development and the necessity of correct localisation of beta-actin mRNA in neuronal development",
-          "url": "../../../result/project/9009906a-e31e-4435-8d4d-89db4fa790a5/details/3f014408-study-of-the-essential-function-of-beta-actin-in-embryonic-development-and-the-necessity-of-correct-localisation-of-beta-actin-mrna-in-neuronal-development/en",
           "description": "The actin cytoskeleton is the driving force for various cell motility processes. Little is known about the function of the six actin isoforms during mammalian development. During this PhD, we will investigate how loss of beta-actine influences angiogenesis and neurogenesis during embryogenesis and how mislocalisation of beta-actine mRNA leads to aberrant neuronal differentiation and angiogenesis."
         },
         {
           "title": "Tes, a cancer-associated LIM-domain protein and novel actin nucleator with a dual function in the cytoplasm and the nucleus",
-          "url": "../../../result/project/2b40ae62-9cd4-4139-b43c-49fd98c1f616/details/3g035311-tes-a-cancer-associated-lim-domain-protein-and-novel-actin-nucleator-with-a-dual-function-in-the-cytoplasm-and-the-nucleus/en",
           "description": "Cell migration is an important process in preserving health. The actin cytoskeleton regulates cell migration and deregulation is often associated with cancer progression. Tes, a potential tumor suppressor, possibly acts as a bi-functional sensor with cytoplasmic and nuclear activity. A structure-function relationship study of Tes and partners using proteomics, medium throughput cell migration assays and microarray experiments will be conducted."
         },
         {
           "title": "The scaffolding actin nucleator tes: identification of domain specific interaction partners and its function in cell migration ands tumor cell invasion",
-          "url": "../../../result/project/9f8e288f-cbd9-4f39-9524-c468277e2849/details/3f021612-the-scaffolding-actin-nucleator-tes--identification-of-domain-specific-interaction-partners-and-its-function-in-cell-migration-ands-tumor-cell-invasion/en",
           "description": "Tes, a potential tumor suppressor, controls actin cytoskeleton assembly at cellular adhesions. We will study structure-function relationships of Tes variants lacking specific domains. By combining proteomics with live cell imaging, we will determine how Tes and two identified partners regulate actin dynamics and cell migration. This will generate information on functions and mechanisms of Tes in cell migration and invasion."
         },
         {
           "title": "Molecular mechanisms in tumor cell invasion and diabetes: bridging novel proteomics with cell biology",
-          "url": "../../../result/project/0f76f010-8504-4b5b-916c-874728792945/details/01g012a7-molecular-mechanisms-in-tumor-cell-invasion-and-diabetes--bridging-novel-proteomics-with-cell-biology/en",
           "description": "Using recently developed gel-free proteome technologies (COFRADIC), we aim at gaining new insights and identifying novel molecules involved in signaling mechnisms leading to tumor invasion and B-cell destruction in diabetes."
         },
         {
           "title": "Stimulated emission depletion microscopy (STED): Nanoscopy for innovative research in the life sciences",
-          "url": "../../../result/project/71531ee7-a9d4-45ed-8dfb-4e0bf0e144ff/details/319301320-stimulated-emission-depletion-microscopy-sted--nanoscopy-for-innovative-research-in-the-life-sciences/en",
           "description": "The well-known adagio ‘seeing is believing’ is as much of relevance to life science research today as it ever was. Since the invention of the first microscopes almost 400 years ago, there has been an ongoing strive to ever see more details within organisms, tissues and cells. Based on fundamental physics from the nineteenth century, it was long thought impossible to see beyond a resolution of ~200 nm with light microscopes. However, thanks to recent advances in fluorescent labels and laser technology, it is now possible to improve this resolution by a staggering factor of 10, making ‘nanoscopy’ a reality. This Nobel Prize winning work is undoubtedly one of the most significant technological advances of the early 21st century, allowing an unprecedented view on living biological specimen almost down to the molecular level. Since this ground-breaking technology is currently not present at UGent or its surroundings, we propose to acquire a state-of-the art STED nanoscope for the benefit of our life science researchers. Broad interest in nanoscopy is evidenced by the support from a large consortium of 25 ZAP promoters from all of the 5 life science faculties. This unique instrument will be hosted and supported by the Centre for Advanced Light Microscopy, established in 2018 as one of the ‘Centres of Expertise’ of Ghent University with the ambition to support high quality life science research at UGent with state-of-the-art microscopy equipment and expertise."
         },
         {
           "title": "Super-zoom 4D-confocal microscope for in vivo imaging",
-          "url": "../../../result/project/4974b6f1-5806-4715-b023-3caf3c1c3aa8/details/19106712-super-zoom-4d-confocal-microscope-for-in-vivo-imaging/en",
           "description": "Super-zoom macro confocal laser scanning microscopy is a novel technology for studying complex expression patterns and dynamic behavior of macromolecules in thick tissue specimens, organs, intact small organisms, and embryos. It is an outstanding technology to study the development of wild type and mutant model organisms, such as transgenic and knock-out (KO) mice, frogs, zebrafish and marine invertebrates."
         },
         {
           "title": "Target identification for orphan peptides through furan-oxidation based cross-linking for application in cancer research",
-          "url": "../../../result/project/629b6a13-7961-4cf9-85d2-8d5cb51b6551/details/01d40413-target-identification-for-orphan-peptides-through-furan-oxidation-based-cross-linking-for-application-in-cancer-research/en",
           "description": "Furan-modified peptides will be synthesized for cross-linking to known and unknown target receptors."
         },
         {
           "title": "BOF-ZAP professorship in medical biochemistry",
-          "url": "../../../result/project/edebae54-b45e-4b93-a3f7-c71ac58f1e03/details/01z37315-bof-zap-professorship-in-medical-biochemistry/en",
           "description": "A BOF-ZAP professorship granted by the Special Research Fund is a primarily research-oriented position and is made available for excellent researchers with a high-quality research programme."
         },
         {
           "title": "β-actin in neutral crest cell migration and brain development",
-          "url": "../../../result/project/bde0b762-ef78-4ee4-abc3-d06f563d361a/details/365n9110--actin-in-neutral-crest-cell-migration-and-brain-development/en",
           "description": "The mouse genome consists of six functional actin genes of which the expression patterns are temporally and spatially regulated during development and in the adult organism. Deletion of beta-actin in mouse is lethal during embryonic development, although there is compensatory expression of other actin isoforms. This suggests different isoform specific functions and, more in particular, an important function for beta-actin during early mammalian development. We here report a role for beta-actin during neural crest ontogeny. Although beta-actin null neural crest cells show expression of neural crest markers, less cells delaminate and their migration arrests shortly after. These phenotypes were associated with elevated apoptosis levels in neural crest cells, whereas proliferation levels were unchanged. Specifically the pre-migratory neural crest cells displayed higher levels of apoptosis, suggesting increased apoptosis in the neural tube accounts for the decreased amount of migrating neural crest cells seen in the beta-actin null embryos. These cells additionally displayed a lack of membrane bound N-cadherin and dramatic decrease in cadherin-11 expression which was more pronounced in the pre-migratory neural crest population, potentially indicating linkage between the cadherin-11 expression and apoptosis. By inhibiting ROCK ex vivo, the knockout neural crest cells regained migratory capacity and cadherin-11 expression was upregulated. We conclude that the presence of beta-actin is vital for survival, specifically of pre-migratory neural crest cells, their proper emigration from the neural tube and their subsequent migration. Furthermore, the absence of beta-actin affects cadherin-11 and N-cadherin function, which could partly be alleviated by ROCK inhibition, situating the Rho-ROCK signaling in a feedback loop with cadherin-11."
         },
         {
           "title": "Beta-actin mediated regulation of cell migration in embryonic development.",
-          "url": "../../../result/project/580d4ba3-5ff6-4a7e-a438-0e7a11361326/details/3g044110-beta-actin-mediated-regulation-of-cell-migration-in-embryonic-development/en",
           "description": "Cell migration is an evolutionary conserved mechanism that underlies the development and functioning of organisms (Tondeleir et al., 2009). Despite the differences in cell types involved, their migratory events occur by similar molecular mechanisms that rely on a functional actin cytoskeleton. The actin system is complex and there is reciprocal communication with the extracellular matrix and with other cells via various signaling pathways. Due to this complexity, our research group initiated studying the actin cytoskeleton via systems biology approaches. The model system we employ is the unique β-actin knock out (KO) mouse. One of the surprising results is that deleting β-actin not only impairs cell migration but also causes reprogramming of the expression profile of cells. Based on these recent data we formulate various hypotheses that will be addressed in this project. Genetic ablation of β-actin results in embryonic lethality at midgestation: day E10,5 (Schmerling et al., 2005). Our primary observation is the actin isoform switch or compensatory expression of other actin isoforms (mainly α-smooth muscle actin, αSMA) in the β-actin KO mouse embryonic fibroblasts (MEFs) and embryo’s. In addition, β-actin KO MEFs display a severe migration defect and pronounced stress fiber and focal adhesion formation, caused by a feedback mechanism induced by overproduction of αSMA and involving Rho-ROCK activity. Disrupting the stress fibers with ROCK inhibitor or blebbistatin restores cell migration, indicating that cell migration can occur without β-actin and challenging the dogma in the field that β-actin is the driving force for cell migration (Lambrechts et al., in preparation). It also shows that the cell migration defect is a secondary effect of β-actin ablation, due to altered regulation of the actin cytoskeleton. Consistent with this, quantitative proteomics and micro-array experiments indicate dramatic changes in gene expressions (1580 affected genes) between WT MEFs and β-actin KO MEFs. These observations strengthen our hypothesis that knock-out of β- actin triggers αSMA expression, leading to altered cytoskeletal organization and/or subsequent differential expression regulation."
         },
         {
           "title": "BOF-ZAP professorship in medical biochemistry",
-          "url": "../../../result/project/edebae54-b45e-4b93-a3f7-c71ac58f1e03/details/01z37315-bof-zap-professorship-in-medical-biochemistry/en",
           "description": "A BOF-ZAP professorship granted by the Special Research Fund is a primarily research-oriented position and is made available for excellent researchers with a high-quality research programme."
         },
         {
           "title": "Capture, dissemination and analysis of multiscale cell migration data for biological and clinical applications (MULTIMOT)",
-          "url": "../../../result/project/aa7737c8-202c-40eb-ba12-708a515de4dc/details/multimot-41g05615-capture-dissemination-and-analysis-of-multiscale-cell-migration-data-for-biological-and-clinical-applications-multimot/en",
           "description": "Cell migration is the fundamental process in medically highly relevant topics, including morphogenesis, immune function, wound healing,and cancer metastasis, and the study of cell migration thus has a direct impact on major clinical applications, especially regarding personalized treatment and diagnosis. Over the last few years, cell migration research has benefited enormously from advances in methodology and instrumentation, allowing multiplexing and multi-parameter post-processing of cell migration analyses to become widely used. As cell migration studies have thus de facto become both a high-content as well as a high-throughput science, an urgent yet largely unmet bioinformatics need has emerged in the form of intra- and inter-lab data management solutions, standardization and dissemination infrastructure, and novel approaches and algorithms for meta-analysis."
         },
         {
           "title": "Causative role of actin binding proteins in tumor progression: focus on thymosin beta isoforms",
-          "url": "../../../result/project/0ab5eed0-2bf2-44b5-a7bf-97868b63f5c4/details/3f001604-causative-role-of-actin-binding-proteins-in-tumor-progression--focus-on-thymosin-beta-isoforms/en",
           "description": null
         },
         {
           "title": "Differential regulation of beta- and gamma-actin in cell migration and neuronal differentiation",
-          "url": "../../../result/project/c1888fb4-da1c-417b-aa7c-b7962bf179f2/details/3e001401-differential-regulation-of-beta--and-gamma-actin-in-cell-migration-and-neuronal-differentiation/en",
           "description": null
         },
         {
           "title": "Exploring the potential of cytotoxic biologicals or synthetic drugs in cancer cell models",
-          "url": "../../../result/project/2401aa4b-5a35-11ef-b6a0-49d99dda6551/details/bof-baf-3y-2024-01-022-exploring-the-potential-of-cytotoxic-biologicals-or-synthetic-drugs-in-cancer-cell-models/en",
           "description": "Cancer affects millions of people a year worldwide. To combat cancer the cytotoxic potential of novel drugs of natural origin or the application of specific combinations of existing drugs with increased efficacy are an active area of research. The main topic in the research group is exploring structure-activity relations of cytotoxic cyclic lipopeptides produced by Pseudomonas bacteria or chemically synthesized derivatives of these biologicals using in vitro analysis on cancer cell lines of diverse origin. The unique cell death inducing mechanism of these lipopeptides in which the cancer cell membrane is targeted is also investigated. As general approach to address cytotoxicity in this research line and in ongoing parallel collaborative research, we address the urgent need for standardization of specific cell-based assays and combine reductionist approaches (biochemical, molecular cell biology, microscopy, …) with systems biology approaches (proteomics, imaging analysis, bioinformatics, …)."
         },
         {
           "title": "MEMCLIP: A comprehensive chemical-biology approach to understand the bioactivity of Pseudomonas cyclic lipopeptides on eukaryotic membranes",
-          "url": "../../../result/project/01f723e7-5acd-11e9-8a8a-cbee2414e8b5/details/memclip-01g02819-memclip--a-comprehensive-chemical-biology-approach-to-understand-the-bioactivity-of-pseudomonas-cyclic-lipopeptides-on-eukaryotic-membranes/en",
           "description": "The activity of cyclic lipopeptides, produced by Pseudomonas bacteria and chemically synthesized analogues will be tested in a standardized way on human (healthy and cancer) cells, plant cell suspensions and fungal cells. Using a combination of biological and (physico-)chemical methods we will test the hypothesis that in all these eukaryotic cells, these lipopeptides act on lipids in the cell membranes."
         },
         {
           "title": "Molecular mechanisms in tumor cell invasion and diabetes: bridging novel proteomics with cell biology",
-          "url": "../../../result/project/0f76f010-8504-4b5b-916c-874728792945/details/01g012a7-molecular-mechanisms-in-tumor-cell-invasion-and-diabetes--bridging-novel-proteomics-with-cell-biology/en",
           "description": "Using recently developed gel-free proteome technologies (COFRADIC), we aim at gaining new insights and identifying novel molecules involved in signaling mechnisms leading to tumor invasion and B-cell destruction in diabetes."
         },
         {
           "title": "Regulatorische functie van beta-actine op eiwitexpressie, celmorfologie en focale adhesievorming",
-          "url": "../../../result/project/c8c1a84b-eec8-4e92-94fb-e13d4b2a64cd/details/31508308-regulatorische-functie-van-beta-actine-op-eiwitexpressie-celmorfologie-en-focale-adhesievorming/en",
           "description": "Regulatorische functie van beta-actine op eiwitexpressie, celmorfologie en focale adhesievorming"
         },
         {
           "title": "Study of the essential function of beta-actin in embryonic development and the necessity for correct localisation of beta-actin MRNA during neuronal development",
-          "url": "../../../result/project/84c91168-8794-440b-b577-f19b9cc0a2db/details/01d22407-study-of-the-essential-function-of-beta-actin-in-embryonic-development-and-the-necessity-for-correct-localisation-of-beta-actin-mrna-during-neuronal-development/en",
           "description": "Through analysis of the B-actin knock-out en knock-in mice, and derived cell lines thereof, we will study the essential functions of B-actin in development (more specific in vascularisation and neuronal differentiation) and the role of the 3'UTR in correct localization and function of B-actin. Several methods will be used, including in situ immunostaining, primary cell cultures, RNAi and differential proteome analysis."
         },
         {
           "title": "Study of the essential function of beta-actin in embryonic development and the necessity of correct localisation of beta-actin mRNA in neuronal development",
-          "url": "../../../result/project/9009906a-e31e-4435-8d4d-89db4fa790a5/details/3f014408-study-of-the-essential-function-of-beta-actin-in-embryonic-development-and-the-necessity-of-correct-localisation-of-beta-actin-mrna-in-neuronal-development/en",
           "description": "The actin cytoskeleton is the driving force for various cell motility processes. Little is known about the function of the six actin isoforms during mammalian development. During this PhD, we will investigate how loss of beta-actine influences angiogenesis and neurogenesis during embryogenesis and how mislocalisation of beta-actine mRNA leads to aberrant neuronal differentiation and angiogenesis."
         },
         {
           "title": "Tes, a cancer-associated LIM-domain protein and novel actin nucleator with a dual function in the cytoplasm and the nucleus",
-          "url": "../../../result/project/2b40ae62-9cd4-4139-b43c-49fd98c1f616/details/3g035311-tes-a-cancer-associated-lim-domain-protein-and-novel-actin-nucleator-with-a-dual-function-in-the-cytoplasm-and-the-nucleus/en",
           "description": "Cell migration is an important process in preserving health. The actin cytoskeleton regulates cell migration and deregulation is often associated with cancer progression. Tes, a potential tumor suppressor, possibly acts as a bi-functional sensor with cytoplasmic and nuclear activity. A structure-function relationship study of Tes and partners using proteomics, medium throughput cell migration assays and microarray experiments will be conducted."
         },
         {
           "title": "The scaffolding actin nucleator tes: identification of domain specific interaction partners and its function in cell migration ands tumor cell invasion",
-          "url": "../../../result/project/9f8e288f-cbd9-4f39-9524-c468277e2849/details/3f021612-the-scaffolding-actin-nucleator-tes--identification-of-domain-specific-interaction-partners-and-its-function-in-cell-migration-ands-tumor-cell-invasion/en",
           "description": "Tes, a potential tumor suppressor, controls actin cytoskeleton assembly at cellular adhesions. We will study structure-function relationships of Tes variants lacking specific domains. By combining proteomics with live cell imaging, we will determine how Tes and two identified partners regulate actin dynamics and cell migration. This will generate information on functions and mechanisms of Tes in cell migration and invasion."
         },
         {
           "title": "Molecular mechanisms in tumor cell invasion and diabetes: bridging novel proteomics with cell biology",
-          "url": "../../../result/project/0f76f010-8504-4b5b-916c-874728792945/details/01g012a7-molecular-mechanisms-in-tumor-cell-invasion-and-diabetes--bridging-novel-proteomics-with-cell-biology/en",
           "description": "Using recently developed gel-free proteome technologies (COFRADIC), we aim at gaining new insights and identifying novel molecules involved in signaling mechnisms leading to tumor invasion and B-cell destruction in diabetes."
         },
         {
           "title": "Stimulated emission depletion microscopy (STED): Nanoscopy for innovative research in the life sciences",
-          "url": "../../../result/project/71531ee7-a9d4-45ed-8dfb-4e0bf0e144ff/details/319301320-stimulated-emission-depletion-microscopy-sted--nanoscopy-for-innovative-research-in-the-life-sciences/en",
           "description": "The well-known adagio ‘seeing is believing’ is as much of relevance to life science research today as it ever was. Since the invention of the first microscopes almost 400 years ago, there has been an ongoing strive to ever see more details within organisms, tissues and cells. Based on fundamental physics from the nineteenth century, it was long thought impossible to see beyond a resolution of ~200 nm with light microscopes. However, thanks to recent advances in fluorescent labels and laser technology, it is now possible to improve this resolution by a staggering factor of 10, making ‘nanoscopy’ a reality. This Nobel Prize winning work is undoubtedly one of the most significant technological advances of the early 21st century, allowing an unprecedented view on living biological specimen almost down to the molecular level. Since this ground-breaking technology is currently not present at UGent or its surroundings, we propose to acquire a state-of-the art STED nanoscope for the benefit of our life science researchers. Broad interest in nanoscopy is evidenced by the support from a large consortium of 25 ZAP promoters from all of the 5 life science faculties. This unique instrument will be hosted and supported by the Centre for Advanced Light Microscopy, established in 2018 as one of the ‘Centres of Expertise’ of Ghent University with the ambition to support high quality life science research at UGent with state-of-the-art microscopy equipment and expertise."
         },
         {
           "title": "Super-zoom 4D-confocal microscope for in vivo imaging",
-          "url": "../../../result/project/4974b6f1-5806-4715-b023-3caf3c1c3aa8/details/19106712-super-zoom-4d-confocal-microscope-for-in-vivo-imaging/en",
           "description": "Super-zoom macro confocal laser scanning microscopy is a novel technology for studying complex expression patterns and dynamic behavior of macromolecules in thick tissue specimens, organs, intact small organisms, and embryos. It is an outstanding technology to study the development of wild type and mutant model organisms, such as transgenic and knock-out (KO) mice, frogs, zebrafish and marine invertebrates."
         },
         {
           "title": "Target identification for orphan peptides through furan-oxidation based cross-linking for application in cancer research",
-          "url": "../../../result/project/629b6a13-7961-4cf9-85d2-8d5cb51b6551/details/01d40413-target-identification-for-orphan-peptides-through-furan-oxidation-based-cross-linking-for-application-in-cancer-research/en",
           "description": "Furan-modified peptides will be synthesized for cross-linking to known and unknown target receptors."
         },
         {
           "title": "BOF-ZAP professorship in medical biochemistry",
-          "url": "../../../result/project/edebae54-b45e-4b93-a3f7-c71ac58f1e03/details/01z37315-bof-zap-professorship-in-medical-biochemistry/en",
           "description": "A BOF-ZAP professorship granted by the Special Research Fund is a primarily research-oriented position and is made available for excellent researchers with a high-quality research programme."
         },
         {
           "title": "β-actin in neutral crest cell migration and brain development",
-          "url": "../../../result/project/bde0b762-ef78-4ee4-abc3-d06f563d361a/details/365n9110--actin-in-neutral-crest-cell-migration-and-brain-development/en",
           "description": "The mouse genome consists of six functional actin genes of which the expression patterns are temporally and spatially regulated during development and in the adult organism. Deletion of beta-actin in mouse is lethal during embryonic development, although there is compensatory expression of other actin isoforms. This suggests different isoform specific functions and, more in particular, an important function for beta-actin during early mammalian development. We here report a role for beta-actin during neural crest ontogeny. Although beta-actin null neural crest cells show expression of neural crest markers, less cells delaminate and their migration arrests shortly after. These phenotypes were associated with elevated apoptosis levels in neural crest cells, whereas proliferation levels were unchanged. Specifically the pre-migratory neural crest cells displayed higher levels of apoptosis, suggesting increased apoptosis in the neural tube accounts for the decreased amount of migrating neural crest cells seen in the beta-actin null embryos. These cells additionally displayed a lack of membrane bound N-cadherin and dramatic decrease in cadherin-11 expression which was more pronounced in the pre-migratory neural crest population, potentially indicating linkage between the cadherin-11 expression and apoptosis. By inhibiting ROCK ex vivo, the knockout neural crest cells regained migratory capacity and cadherin-11 expression was upregulated. We conclude that the presence of beta-actin is vital for survival, specifically of pre-migratory neural crest cells, their proper emigration from the neural tube and their subsequent migration. Furthermore, the absence of beta-actin affects cadherin-11 and N-cadherin function, which could partly be alleviated by ROCK inhibition, situating the Rho-ROCK signaling in a feedback loop with cadherin-11."
         },
         {
           "title": "Beta-actin mediated regulation of cell migration in embryonic development.",
-          "url": "../../../result/project/580d4ba3-5ff6-4a7e-a438-0e7a11361326/details/3g044110-beta-actin-mediated-regulation-of-cell-migration-in-embryonic-development/en",
           "description": "Cell migration is an evolutionary conserved mechanism that underlies the development and functioning of organisms (Tondeleir et al., 2009). Despite the differences in cell types involved, their migratory events occur by similar molecular mechanisms that rely on a functional actin cytoskeleton. The actin system is complex and there is reciprocal communication with the extracellular matrix and with other cells via various signaling pathways. Due to this complexity, our research group initiated studying the actin cytoskeleton via systems biology approaches. The model system we employ is the unique β-actin knock out (KO) mouse. One of the surprising results is that deleting β-actin not only impairs cell migration but also causes reprogramming of the expression profile of cells. Based on these recent data we formulate various hypotheses that will be addressed in this project. Genetic ablation of β-actin results in embryonic lethality at midgestation: day E10,5 (Schmerling et al., 2005). Our primary observation is the actin isoform switch or compensatory expression of other actin isoforms (mainly α-smooth muscle actin, αSMA) in the β-actin KO mouse embryonic fibroblasts (MEFs) and embryo’s. In addition, β-actin KO MEFs display a severe migration defect and pronounced stress fiber and focal adhesion formation, caused by a feedback mechanism induced by overproduction of αSMA and involving Rho-ROCK activity. Disrupting the stress fibers with ROCK inhibitor or blebbistatin restores cell migration, indicating that cell migration can occur without β-actin and challenging the dogma in the field that β-actin is the driving force for cell migration (Lambrechts et al., in preparation). It also shows that the cell migration defect is a secondary effect of β-actin ablation, due to altered regulation of the actin cytoskeleton. Consistent with this, quantitative proteomics and micro-array experiments indicate dramatic changes in gene expressions (1580 affected genes) between WT MEFs and β-actin KO MEFs. These observations strengthen our hypothesis that knock-out of β- actin triggers αSMA expression, leading to altered cytoskeletal organization and/or subsequent differential expression regulation."
         },
         {
           "title": "BOF-ZAP professorship in medical biochemistry",
-          "url": "../../../result/project/edebae54-b45e-4b93-a3f7-c71ac58f1e03/details/01z37315-bof-zap-professorship-in-medical-biochemistry/en",
           "description": "A BOF-ZAP professorship granted by the Special Research Fund is a primarily research-oriented position and is made available for excellent researchers with a high-quality research programme."
         },
         {
           "title": "Capture, dissemination and analysis of multiscale cell migration data for biological and clinical applications (MULTIMOT)",
-          "url": "../../../result/project/aa7737c8-202c-40eb-ba12-708a515de4dc/details/multimot-41g05615-capture-dissemination-and-analysis-of-multiscale-cell-migration-data-for-biological-and-clinical-applications-multimot/en",
           "description": "Cell migration is the fundamental process in medically highly relevant topics, including morphogenesis, immune function, wound healing,and cancer metastasis, and the study of cell migration thus has a direct impact on major clinical applications, especially regarding personalized treatment and diagnosis. Over the last few years, cell migration research has benefited enormously from advances in methodology and instrumentation, allowing multiplexing and multi-parameter post-processing of cell migration analyses to become widely used. As cell migration studies have thus de facto become both a high-content as well as a high-throughput science, an urgent yet largely unmet bioinformatics need has emerged in the form of intra- and inter-lab data management solutions, standardization and dissemination infrastructure, and novel approaches and algorithms for meta-analysis."
         },
         {
           "title": "Causative role of actin binding proteins in tumor progression: focus on thymosin beta isoforms",
-          "url": "../../../result/project/0ab5eed0-2bf2-44b5-a7bf-97868b63f5c4/details/3f001604-causative-role-of-actin-binding-proteins-in-tumor-progression--focus-on-thymosin-beta-isoforms/en",
           "description": null
         },
         {
           "title": "Differential regulation of beta- and gamma-actin in cell migration and neuronal differentiation",
-          "url": "../../../result/project/c1888fb4-da1c-417b-aa7c-b7962bf179f2/details/3e001401-differential-regulation-of-beta--and-gamma-actin-in-cell-migration-and-neuronal-differentiation/en",
           "description": null
         },
         {
           "title": "Exploring the potential of cytotoxic biologicals or synthetic drugs in cancer cell models",
-          "url": "../../../result/project/2401aa4b-5a35-11ef-b6a0-49d99dda6551/details/bof-baf-3y-2024-01-022-exploring-the-potential-of-cytotoxic-biologicals-or-synthetic-drugs-in-cancer-cell-models/en",
           "description": "Cancer affects millions of people a year worldwide. To combat cancer the cytotoxic potential of novel drugs of natural origin or the application of specific combinations of existing drugs with increased efficacy are an active area of research. The main topic in the research group is exploring structure-activity relations of cytotoxic cyclic lipopeptides produced by Pseudomonas bacteria or chemically synthesized derivatives of these biologicals using in vitro analysis on cancer cell lines of diverse origin. The unique cell death inducing mechanism of these lipopeptides in which the cancer cell membrane is targeted is also investigated. As general approach to address cytotoxicity in this research line and in ongoing parallel collaborative research, we address the urgent need for standardization of specific cell-based assays and combine reductionist approaches (biochemical, molecular cell biology, microscopy, …) with systems biology approaches (proteomics, imaging analysis, bioinformatics, …)."
         },
         {
           "title": "MEMCLIP: A comprehensive chemical-biology approach to understand the bioactivity of Pseudomonas cyclic lipopeptides on eukaryotic membranes",
-          "url": "../../../result/project/01f723e7-5acd-11e9-8a8a-cbee2414e8b5/details/memclip-01g02819-memclip--a-comprehensive-chemical-biology-approach-to-understand-the-bioactivity-of-pseudomonas-cyclic-lipopeptides-on-eukaryotic-membranes/en",
           "description": "The activity of cyclic lipopeptides, produced by Pseudomonas bacteria and chemically synthesized analogues will be tested in a standardized way on human (healthy and cancer) cells, plant cell suspensions and fungal cells. Using a combination of biological and (physico-)chemical methods we will test the hypothesis that in all these eukaryotic cells, these lipopeptides act on lipids in the cell membranes."
         },
         {
           "title": "Molecular mechanisms in tumor cell invasion and diabetes: bridging novel proteomics with cell biology",
-          "url": "../../../result/project/0f76f010-8504-4b5b-916c-874728792945/details/01g012a7-molecular-mechanisms-in-tumor-cell-invasion-and-diabetes--bridging-novel-proteomics-with-cell-biology/en",
           "description": "Using recently developed gel-free proteome technologies (COFRADIC), we aim at gaining new insights and identifying novel molecules involved in signaling mechnisms leading to tumor invasion and B-cell destruction in diabetes."
         },
         {
           "title": "Regulatorische functie van beta-actine op eiwitexpressie, celmorfologie en focale adhesievorming",
-          "url": "../../../result/project/c8c1a84b-eec8-4e92-94fb-e13d4b2a64cd/details/31508308-regulatorische-functie-van-beta-actine-op-eiwitexpressie-celmorfologie-en-focale-adhesievorming/en",
           "description": "Regulatorische functie van beta-actine op eiwitexpressie, celmorfologie en focale adhesievorming"
         },
         {
           "title": "Study of the essential function of beta-actin in embryonic development and the necessity for correct localisation of beta-actin MRNA during neuronal development",
-          "url": "../../../result/project/84c91168-8794-440b-b577-f19b9cc0a2db/details/01d22407-study-of-the-essential-function-of-beta-actin-in-embryonic-development-and-the-necessity-for-correct-localisation-of-beta-actin-mrna-during-neuronal-development/en",
           "description": "Through analysis of the B-actin knock-out en knock-in mice, and derived cell lines thereof, we will study the essential functions of B-actin in development (more specific in vascularisation and neuronal differentiation) and the role of the 3'UTR in correct localization and function of B-actin. Several methods will be used, including in situ immunostaining, primary cell cultures, RNAi and differential proteome analysis."
         },
         {
           "title": "Study of the essential function of beta-actin in embryonic development and the necessity of correct localisation of beta-actin mRNA in neuronal development",
-          "url": "../../../result/project/9009906a-e31e-4435-8d4d-89db4fa790a5/details/3f014408-study-of-the-essential-function-of-beta-actin-in-embryonic-development-and-the-necessity-of-correct-localisation-of-beta-actin-mrna-in-neuronal-development/en",
           "description": "The actin cytoskeleton is the driving force for various cell motility processes. Little is known about the function of the six actin isoforms during mammalian development. During this PhD, we will investigate how loss of beta-actine influences angiogenesis and neurogenesis during embryogenesis and how mislocalisation of beta-actine mRNA leads to aberrant neuronal differentiation and angiogenesis."
         },
         {
           "title": "Tes, a cancer-associated LIM-domain protein and novel actin nucleator with a dual function in the cytoplasm and the nucleus",
-          "url": "../../../result/project/2b40ae62-9cd4-4139-b43c-49fd98c1f616/details/3g035311-tes-a-cancer-associated-lim-domain-protein-and-novel-actin-nucleator-with-a-dual-function-in-the-cytoplasm-and-the-nucleus/en",
           "description": "Cell migration is an important process in preserving health. The actin cytoskeleton regulates cell migration and deregulation is often associated with cancer progression. Tes, a potential tumor suppressor, possibly acts as a bi-functional sensor with cytoplasmic and nuclear activity. A structure-function relationship study of Tes and partners using proteomics, medium throughput cell migration assays and microarray experiments will be conducted."
         },
         {
           "title": "The scaffolding actin nucleator tes: identification of domain specific interaction partners and its function in cell migration ands tumor cell invasion",
-          "url": "../../../result/project/9f8e288f-cbd9-4f39-9524-c468277e2849/details/3f021612-the-scaffolding-actin-nucleator-tes--identification-of-domain-specific-interaction-partners-and-its-function-in-cell-migration-ands-tumor-cell-invasion/en",
           "description": "Tes, a potential tumor suppressor, controls actin cytoskeleton assembly at cellular adhesions. We will study structure-function relationships of Tes variants lacking specific domains. By combining proteomics with live cell imaging, we will determine how Tes and two identified partners regulate actin dynamics and cell migration. This will generate information on functions and mechanisms of Tes in cell migration and invasion."
         }
       ],
       "copromotor": [
         {
           "title": "Molecular mechanisms in tumor cell invasion and diabetes: bridging novel proteomics with cell biology",
-          "url": "../../../result/project/0f76f010-8504-4b5b-916c-874728792945/details/01g012a7-molecular-mechanisms-in-tumor-cell-invasion-and-diabetes--bridging-novel-proteomics-with-cell-biology/en",
           "description": "Using recently developed gel-free proteome technologies (COFRADIC), we aim at gaining new insights and identifying novel molecules involved in signaling mechnisms leading to tumor invasion and B-cell destruction in diabetes."
         },
         {
           "title": "Stimulated emission depletion microscopy (STED): Nanoscopy for innovative research in the life sciences",
-          "url": "../../../result/project/71531ee7-a9d4-45ed-8dfb-4e0bf0e144ff/details/319301320-stimulated-emission-depletion-microscopy-sted--nanoscopy-for-innovative-research-in-the-life-sciences/en",
           "description": "The well-known adagio ‘seeing is believing’ is as much of relevance to life science research today as it ever was. Since the invention of the first microscopes almost 400 years ago, there has been an ongoing strive to ever see more details within organisms, tissues and cells. Based on fundamental physics from the nineteenth century, it was long thought impossible to see beyond a resolution of ~200 nm with light microscopes. However, thanks to recent advances in fluorescent labels and laser technology, it is now possible to improve this resolution by a staggering factor of 10, making ‘nanoscopy’ a reality. This Nobel Prize winning work is undoubtedly one of the most significant technological advances of the early 21st century, allowing an unprecedented view on living biological specimen almost down to the molecular level. Since this ground-breaking technology is currently not present at UGent or its surroundings, we propose to acquire a state-of-the art STED nanoscope for the benefit of our life science researchers. Broad interest in nanoscopy is evidenced by the support from a large consortium of 25 ZAP promoters from all of the 5 life science faculties. This unique instrument will be hosted and supported by the Centre for Advanced Light Microscopy, established in 2018 as one of the ‘Centres of Expertise’ of Ghent University with the ambition to support high quality life science research at UGent with state-of-the-art microscopy equipment and expertise."
         },
         {
           "title": "Super-zoom 4D-confocal microscope for in vivo imaging",
-          "url": "../../../result/project/4974b6f1-5806-4715-b023-3caf3c1c3aa8/details/19106712-super-zoom-4d-confocal-microscope-for-in-vivo-imaging/en",
           "description": "Super-zoom macro confocal laser scanning microscopy is a novel technology for studying complex expression patterns and dynamic behavior of macromolecules in thick tissue specimens, organs, intact small organisms, and embryos. It is an outstanding technology to study the development of wild type and mutant model organisms, such as transgenic and knock-out (KO) mice, frogs, zebrafish and marine invertebrates."
         },
         {
           "title": "Target identification for orphan peptides through furan-oxidation based cross-linking for application in cancer research",
-          "url": "../../../result/project/629b6a13-7961-4cf9-85d2-8d5cb51b6551/details/01d40413-target-identification-for-orphan-peptides-through-furan-oxidation-based-cross-linking-for-application-in-cancer-research/en",
           "description": "Furan-modified peptides will be synthesized for cross-linking to known and unknown target receptors."
         }
       ],
       "fellow": [
         {
           "title": "BOF-ZAP professorship in medical biochemistry",
-          "url": "../../../result/project/edebae54-b45e-4b93-a3f7-c71ac58f1e03/details/01z37315-bof-zap-professorship-in-medical-biochemistry/en",
           "description": "A BOF-ZAP professorship granted by the Special Research Fund is a primarily research-oriented position and is made available for excellent researchers with a high-quality research programme."
         }
       ]

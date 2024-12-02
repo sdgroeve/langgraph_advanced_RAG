@@ -33,7 +33,7 @@ def get_project_description(project_url):
         elif project_url.startswith('/'):
             project_url = 'https://research.ugent.be' + project_url
             
-        print(f"Fetching description from: {project_url}")  # Debug print
+        #print(f"Fetching description from: {project_url}")  # Debug print
         response = requests.get(project_url)
         soup = BeautifulSoup(response.text, 'html.parser')
         description_div = soup.find('div', {'id': 'description_showmore'})
@@ -169,12 +169,11 @@ def scrape_researcher_details(url):
                                     project_url = 'https://research.ugent.be' + project_url
                                 project_info = {
                                     'title': title_div.text.strip(),
-                                    'url': project_url,
                                     'description': get_project_description(project_url)
                                 }
                                 projects[role].append(project_info)
                                 # Add a small delay to avoid overwhelming the server
-                                time.sleep(0.5)
+                                #time.sleep(0.5)
         
         if any(projects.values()):  # Only add if there are any projects
             details['projects'] = projects
@@ -258,7 +257,7 @@ for researcher in researchers:
 
     # Now get research.ugent.be profile info
     research_url = get_research_profile_url(researcher['name'])
-    print(f"Fetching research profile from {research_url}")
+    #print(f"Fetching research profile from {research_url}")
     
     try:
         details = scrape_researcher_details(research_url)
@@ -267,7 +266,7 @@ for researcher in researchers:
         print(f"Error fetching research profile: {str(e)}")
 
     # To avoid overwhelming the server
-    time.sleep(1)
+    #time.sleep(1)
     break
 
 # Save the JSON data to a file with proper formatting
