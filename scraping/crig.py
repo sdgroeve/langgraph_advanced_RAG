@@ -267,7 +267,6 @@ for researcher in researchers:
 
     # To avoid overwhelming the server
     #time.sleep(1)
-    break
 
 # Save the JSON data to a file with proper formatting
 with open('scraping/researchers_crig.json', 'w', encoding='utf-8') as f:
