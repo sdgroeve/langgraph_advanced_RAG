@@ -15,6 +15,11 @@ def get_research_profile_url(name):
     formatted_name = name.lower().replace(' ', '-')
     return f"https://research.ugent.be/web/person/{formatted_name}-0/en"
 
+def get_projects_url(name):
+    """Convert researcher name to research.ugent.be projects URL."""
+    formatted_name = name.lower().replace(' ', '-')
+    return f"https://research.ugent.be/web/person/{formatted_name}-0/projects/en"
+
 def scrape_researcher_details(url):
     """Scrape details from a researcher's profile page."""
     response = requests.get(url)
@@ -102,6 +107,41 @@ def scrape_researcher_details(url):
             if expertise:
                 details['expertise'] = expertise
 
+    # Scrape projects from the projects page
+    projects_url = url.replace('/en', '/projects/en')
+    try:
+        projects_response = requests.get(projects_url)
+        projects_soup = BeautifulSoup(projects_response.text, 'html.parser')
+        
+        projects = {'promotor': [], 'copromotor': [], 'fellow': []}
+        
+        # Find project sections by role
+        for section in projects_soup.find_all('div', class_='margin-bottom-gl'):
+            header = section.find('div', class_='header-5')
+            if header:
+                role_text = header.text.strip().lower()
+                role = None
+                if 'promotor' in role_text and 'co' not in role_text:
+                    role = 'promotor'
+                elif 'copromotor' in role_text:
+                    role = 'copromotor'
+                elif 'fellow' in role_text:
+                    role = 'fellow'
+                
+                if role:
+                    # Find all project titles in this section
+                    for project in section.find_all('div', class_='fiche'):
+                        title_div = project.find('div', class_='header-6')
+                        if title_div:
+                            title = title_div.text.strip()
+                            projects[role].append(title)
+        
+        if any(projects.values()):  # Only add if there are any projects
+            details['projects'] = projects
+            
+    except Exception as e:
+        print(f"Error fetching projects: {str(e)}")
+
     return details
 
 # Load HTML from the CRIG URL
@@ -188,6 +228,7 @@ for researcher in researchers:
 
     # To avoid overwhelming the server
     time.sleep(1)
+    break
 
 # Save the JSON data to a file with proper formatting
 with open('scraping/researchers_crig.json', 'w', encoding='utf-8') as f:
