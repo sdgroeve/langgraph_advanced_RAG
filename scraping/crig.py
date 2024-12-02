@@ -20,6 +20,35 @@ def get_projects_url(name):
     formatted_name = name.lower().replace(' ', '-')
     return f"https://research.ugent.be/web/person/{formatted_name}-0/projects/en"
 
+def get_project_description(project_url):
+    """Fetch and extract the description from a project's detail page."""
+    try:
+        # Convert relative URLs to absolute
+        if project_url.startswith('../'):
+            # Extract the relevant part of the path after 'result/project/'
+            match = re.search(r'result/project/(.+?)$', project_url)
+            if match:
+                project_path = match.group(1)
+                project_url = f'https://research.ugent.be/web/result/project/{project_path}'
+        elif project_url.startswith('/'):
+            project_url = 'https://research.ugent.be' + project_url
+            
+        print(f"Fetching description from: {project_url}")  # Debug print
+        response = requests.get(project_url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        description_div = soup.find('div', {'id': 'description_showmore'})
+        if description_div:
+            # Find the paragraph within the description div
+            description_p = description_div.find('p')
+            if description_p:
+                return clean_html(description_p.get_text())
+            # If no paragraph found, try getting all text content
+            return clean_html(description_div.get_text())
+        return None
+    except Exception as e:
+        print(f"Error fetching project description: {str(e)}")
+        return None
+
 def scrape_researcher_details(url):
     """Scrape details from a researcher's profile page."""
     response = requests.get(url)
@@ -129,12 +158,23 @@ def scrape_researcher_details(url):
                     role = 'fellow'
                 
                 if role:
-                    # Find all project titles in this section
+                    # Find all project titles and links in this section
                     for project in section.find_all('div', class_='fiche'):
-                        title_div = project.find('div', class_='header-6')
-                        if title_div:
-                            title = title_div.text.strip()
-                            projects[role].append(title)
+                        project_link = project.find('a')
+                        if project_link:
+                            title_div = project_link.find('div', class_='header-6')
+                            if title_div:
+                                project_url = project_link['href']
+                                if project_url.startswith('/'):
+                                    project_url = 'https://research.ugent.be' + project_url
+                                project_info = {
+                                    'title': title_div.text.strip(),
+                                    'url': project_url,
+                                    'description': get_project_description(project_url)
+                                }
+                                projects[role].append(project_info)
+                                # Add a small delay to avoid overwhelming the server
+                                time.sleep(0.5)
         
         if any(projects.values()):  # Only add if there are any projects
             details['projects'] = projects
