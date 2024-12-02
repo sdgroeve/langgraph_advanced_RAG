@@ -2,13 +2,114 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import time
+import re
 
-# Load HTML from the URL
+def clean_html(text):
+    """Remove HTML tags and clean up whitespace."""
+    text = re.sub(r'<[^>]+>', '', text)
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
+def get_research_profile_url(name):
+    """Convert researcher name to research.ugent.be profile URL."""
+    formatted_name = name.lower().replace(' ', '-')
+    return f"https://research.ugent.be/web/person/{formatted_name}-0/en"
+
+def scrape_researcher_details(url):
+    """Scrape details from a researcher's profile page."""
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    details = {}
+
+    # Extract current positions
+    positions_div = soup.find('div', {'id': 'id1a'})
+    if positions_div:
+        positions = []
+        for position_div in positions_div.find_all('div', class_='detailblokje'):
+            position = {}
+            
+            # Title
+            title_span = position_div.find('span', class_='header-6 text-black')
+            if title_span:
+                position['title'] = title_span.text.strip()
+            
+            # Faculty
+            faculty_link = position_div.find('a', href=lambda x: '/ge/en' in str(x))
+            if faculty_link:
+                position['faculty'] = faculty_link.text.strip()
+            
+            # Department
+            dept_span = position_div.find('span', class_='header-7 text-black')
+            if dept_span:
+                position['department'] = dept_span.text.strip()
+            
+            if position:
+                positions.append(position)
+        
+        if positions:
+            details['current_positions'] = positions
+
+    # Extract research disciplines
+    disciplines_div = soup.find('div', {'id': 'id23'})
+    if disciplines_div:
+        disciplines = []
+        
+        # Find all discipline categories
+        for category_div in disciplines_div.find_all('div', class_='header-6'):
+            category = {
+                'category': category_div.text.strip(),
+                'disciplines': []
+            }
+            
+            # Find the ul that follows this category
+            next_ul = category_div.find_next_sibling('ul')
+            if next_ul:
+                for li in next_ul.find_all('li'):
+                    normal_span = li.find('span', class_='normal')
+                    if normal_span:
+                        discipline = {
+                            'name': normal_span.text.strip(),
+                            'code': normal_span.get('data-code', '')
+                        }
+                        
+                        # Get description from popover
+                        info_icon = li.find('span', class_='fas fa-info-circle')
+                        if info_icon and 'data-content' in info_icon.attrs:
+                            content = info_icon['data-content']
+                            if 'Description' in content:
+                                description = content.split('Description')[1].split('Classification')[0]
+                                description = clean_html(description)
+                                discipline['description'] = description
+                        
+                        category['disciplines'].append(discipline)
+            
+            if category['disciplines']:
+                disciplines.append(category)
+        
+        if disciplines:
+            details['research_disciplines'] = disciplines
+
+    # Extract expertise
+    expertise_div = soup.find('div', {'id': 'id24'})
+    if expertise_div:
+        keywords_div = expertise_div.find('div', class_='keywords')
+        if keywords_div:
+            expertise = []
+            for keyword in keywords_div.find_all('span', class_='keyword-label'):
+                if keyword.text.strip():
+                    expertise.append(keyword.text.strip())
+            
+            if expertise:
+                details['expertise'] = expertise
+
+    return details
+
+# Load HTML from the CRIG URL
 url = 'https://www.crig.ugent.be/en/all-crig-group-leaders-and-members'
-response = requests.get(url)
-html = response.text
+print(f"Fetching CRIG members from {url}")
 
-soup = BeautifulSoup(html, 'html.parser')
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
 
 # Find all researcher profile links
 researchers = []
@@ -37,7 +138,9 @@ if additional_section:
 
 # Extract detailed information from each researcher's profile page
 for researcher in researchers:
-    print(researcher['name'])
+    print(f"\nProcessing {researcher['name']}...")
+    
+    # First get CRIG profile info
     profile_url = researcher['profile_url']
     profile_response = requests.get(profile_url)
     profile_html = profile_response.text
@@ -73,15 +176,21 @@ for researcher in researchers:
             links.append({'text': link_text, 'url': link_url})
         researcher['links'] = links
 
-    # To avoid overwhelming the server, add a delay between requests
-    time.sleep(0.1)
+    # Now get research.ugent.be profile info
+    research_url = get_research_profile_url(researcher['name'])
+    print(f"Fetching research profile from {research_url}")
+    
+    try:
+        details = scrape_researcher_details(research_url)
+        researcher.update(details)
+    except Exception as e:
+        print(f"Error fetching research profile: {str(e)}")
 
-# Convert the list of researchers to JSON
-researchers_json = json.dumps(researchers, indent=4)
+    # To avoid overwhelming the server
+    time.sleep(1)
 
-# Save the JSON data to a file
-with open('researchers_crig.json', 'w') as f:
-    f.write(researchers_json)
+# Save the JSON data to a file with proper formatting
+with open('scraping/researchers_crig.json', 'w', encoding='utf-8') as f:
+    json.dump(researchers, f, indent=2, ensure_ascii=False)
 
-# Display the JSON data
-print(researchers_json)
+print("\nScraping completed. Data saved to researchers_crig.json")
