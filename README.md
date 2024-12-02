@@ -56,15 +56,20 @@ To run this project, you need to install the required dependencies, which are li
 ### Web Interface
 To use the web interface, follow these steps:
 
-1. Start the Flask application:
+1. Start Ollama server:
+    ```bash
+    ollama serve
+    ```
+
+2. Start the Flask application:
     ```bash
     python app.py
     ```
     This will launch the web server at http://127.0.0.1:5000
 
-2. Open your web browser and navigate to http://127.0.0.1:5000
+3. Open your web browser and navigate to http://127.0.0.1:5000
 
-3. Use the web interface to input your questions and receive responses about researcher profiles
+4. Use the web interface to input your questions and receive responses about researcher profiles
 
 ### Command Line Interface
 The application can also be run from the command line. Follow these steps:
