@@ -2,7 +2,6 @@ import os
 import json
 from typing_extensions import TypedDict
 from typing import List
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import GPT4AllEmbeddings
 from langchain.prompts import PromptTemplate
@@ -14,8 +13,6 @@ from langchain.schema import Document
 # Constants
 LOCAL_LLM = 'llama3'
 JSON_FILE_PATH = "/home/svend/projects/langgraph_advanced_RAG/scraping/researchers_crig.json"
-CHUNK_SIZE = 250
-CHUNK_OVERLAP = 0
 EMBEDDINGS_DIR = "/home/svend/projects/langgraph_advanced_RAG/embeddings_db"
 
 # Define the state class
@@ -47,18 +44,12 @@ def load_documents_from_json(json_file_path):
                 f"Contact Info: {profile.get('contact_info', 'N/A')}\n"
                 f"Links: {', '.join([link['text'] + ' (' + link['url'] + ')' for link in profile.get('links', [])])}"
             )
+            # Create one document per researcher profile
             docs_list.append(Document(page_content=content))
     return docs_list
 
-# Split the loaded documents into smaller chunks
-def split_documents(docs_list, chunk_size, chunk_overlap):
-    text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-        chunk_size=chunk_size, chunk_overlap=chunk_overlap
-    )
-    return text_splitter.split_documents(docs_list)
-
 # Create or load a vector store using the Chroma library.
-def create_vector_store(doc_splits):
+def create_vector_store(documents):
     embedding_function = GPT4AllEmbeddings()
     
     # Try to load existing embeddings
@@ -77,7 +68,7 @@ def create_vector_store(doc_splits):
     
     # Create new embeddings if none exist or loading failed
     vectorstore = Chroma.from_documents(
-        documents=doc_splits,
+        documents=documents,
         embedding=embedding_function,
         persist_directory=EMBEDDINGS_DIR,
         collection_name="rag-chroma"
@@ -91,11 +82,11 @@ def format_docs(docs):
 
 class RAGQueryEngine:
     def __init__(self):
-        # Load documents and create vector store
+        # Load documents and create vector store directly without splitting
         self.docs_list = load_documents_from_json(JSON_FILE_PATH)
-        self.doc_splits = split_documents(self.docs_list, CHUNK_SIZE, CHUNK_OVERLAP)
-        self.vectorstore = create_vector_store(self.doc_splits)
-        self.retriever = self.vectorstore.as_retriever()
+        self.vectorstore = create_vector_store(self.docs_list)
+        # Set the number of documents to retrieve (e.g., 10)
+        self.retriever = self.vectorstore.as_retriever(search_kwargs={"k": 10})
         
         # Create prompt templates
         self.retrieval_grader_prompt = PromptTemplate(
